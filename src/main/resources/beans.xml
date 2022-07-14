@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+        
+        <bean class ="com.di.Employee" id="emp">
+        <constructor-arg value="555" />
+        <constructor-arg value="Shree ram" />
+        <constructor-arg value="80000" />
+        <constructor-arg value="google" />
+        </bean>
+    <bean class="com.di.Car" id="c">
+    <property name="model" value="bmw"/>
+    <property name="color" value="green"/>
+    <property name="price" value="4444444"/>
+    
+    </bean>
+    <bean class="com.di.Doctor" id="Doc">
+    <property name="id" value="9999"/>
+    <property name="name" value="santosh"/>
+    <property name="age" value="33"/>
+    <property name="car" ref="c"/>
+    </bean>
+    
+
+</beans>
